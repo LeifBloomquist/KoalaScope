@@ -4,6 +4,8 @@
 #include <peekpoke.h>
 #include <conio.h>
 
+#define BASE_URL "http://192.168.7.114/test/"
+
 unsigned char loadtoram(unsigned char lfn, unsigned char* dest, unsigned int length) {
     int l;
 
@@ -28,7 +30,7 @@ int LoadKoalaPictureAndDisplay(unsigned char* koala_filename)
     dev = PEEK(0x00ba); /* get current device number */
 
     /* open the file */
-    if (cbm_open(1, dev, 2, koala_filename)) {
+    if (cbm_open(1, dev, 2, (const char *)koala_filename)) {
         cprintf("Couldn't open %s.\n", koala_filename);
         return(1);
     }
@@ -89,26 +91,31 @@ int LoadKoalaPictureAndDisplay(unsigned char* koala_filename)
 
 void main() 
 {
-    cprintf("KoalaScope Starting...\n\r");
+    int dev;
+    int count;
+
+    clrscr();
+    cprintf("KoalaScope starting...\n\r");
+
+    dev = PEEK(0x00ba); /* get current device number */
+
+    /* Get # of images available */
+    cbm_load(BASE_URL"count.prg", dev, NULL);
+    count = PEEKW(0xC000);
+
+    cprintf("%d Koala images on server.\n\rPress any key to start.\n\r", count);
+    cgetc();
 
     while (1)
     {
-        bordercolor(0);
-        //LoadKoalaPictureAndDisplay("http://192.168.7.114/test/random.koa");
-        LoadKoalaPictureAndDisplay("timespace.koa");
-
         bordercolor(2);
-        cgetc();
+        LoadKoalaPictureAndDisplay(BASE_URL"random.koa");
 
         bordercolor(0);
-        LoadKoalaPictureAndDisplay("cyberwing.koa");
-
-        bordercolor(2);
         cgetc();
     }
 
     // Clean up
-
     POKE(0xd011, 0x1b);
     POKE(0xd016, 0x08);
     POKE(0xd018, 0x17);
