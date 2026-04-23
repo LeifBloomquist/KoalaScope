@@ -19,6 +19,12 @@
                 }
             }
 
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Need to supply path as first argument");
+                return;
+            }
+
             FileCollection fileCollection = new(args[0], "*" + Constants.KOA);
             new HttpServer().Start(local, fileCollection);
 
