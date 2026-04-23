@@ -85,8 +85,29 @@ int LoadKoalaPictureAndDisplay(unsigned char* koala_filename)
     POKE(0xd016, 0x18); /* enable multicolour */
     POKE(0xd018, 0x1f); /* screen at $0400 bitmap at $2000 */
     POKE(0xd020, 0x00); /* black border */
+}
 
-    while (!kbhit()) { ; } /* wait for key */
+void main() 
+{
+    cprintf("KoalaScope Starting...\n\r");
+
+    while (1)
+    {
+        bordercolor(0);
+        //LoadKoalaPictureAndDisplay("http://192.168.7.114/test/random.koa");
+        LoadKoalaPictureAndDisplay("timespace.koa");
+
+        bordercolor(2);
+        cgetc();
+
+        bordercolor(0);
+        LoadKoalaPictureAndDisplay("cyberwing.koa");
+
+        bordercolor(2);
+        cgetc();
+    }
+
+    // Clean up
 
     POKE(0xd011, 0x1b);
     POKE(0xd016, 0x08);
@@ -96,11 +117,4 @@ int LoadKoalaPictureAndDisplay(unsigned char* koala_filename)
 
     clrscr();
     POKE(198, 0); /* clear keyboard queue */
-}
-
-void main() 
-{
-    cprintf("KoalaScope Starting...\n\r");
-    //LoadKoalaPictureAndDisplay("http://192.168.7.114/test/random.koa");
-    LoadKoalaPictureAndDisplay("cyberwing.koa");
 }
