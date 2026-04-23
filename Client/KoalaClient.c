@@ -4,7 +4,8 @@
 #include <peekpoke.h>
 #include <conio.h>
 
-#define BASE_URL "http://192.168.7.114/test/"
+//#define BASE_URL "http://192.168.7.114/test/"
+#define BASE_URL "http://vortex.jammingsignal.com:8064/ml/koala/"
 
 unsigned char loadtoram(unsigned char lfn, unsigned char* dest, unsigned int length) {
     int l;
@@ -109,7 +110,7 @@ void main()
     while (1)
     {
         bordercolor(2);
-        LoadKoalaPictureAndDisplay(BASE_URL"random.koa");
+        LoadKoalaPictureAndDisplay((unsigned char*)BASE_URL"random.koa");
 
         bordercolor(0);
         cgetc();
