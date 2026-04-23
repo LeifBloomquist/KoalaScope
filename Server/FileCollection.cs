@@ -1,6 +1,4 @@
-﻿using System.Xml.Serialization;
-
-namespace KoalaScopeServer
+﻿namespace KoalaScopeServer
 {
     public class FileCollection
     {
