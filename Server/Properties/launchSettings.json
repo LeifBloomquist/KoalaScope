@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "KoalaScopeServer": {
+      "commandName": "Project",
+      "commandLineArgs": "D:\\Koala\\ local"
+    }
+  }
+}
