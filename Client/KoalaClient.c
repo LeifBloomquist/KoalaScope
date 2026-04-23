@@ -81,6 +81,9 @@ int LoadKoalaPictureAndDisplay(unsigned char* koala_filename)
         return(1);
     }
 
+    // TODO, use upper nybble of last byte (background color) for border color
+
+
     /* done */
     cbm_close(1);
 
@@ -109,11 +112,12 @@ void main()
 
     while (1)
     {
+        // TODO, blank screen, or eventually use double buffering for smooth transition
         bordercolor(2);
         LoadKoalaPictureAndDisplay((unsigned char*)BASE_URL"random.koa");
 
         bordercolor(0);
-        cgetc();
+        cgetc();   // TODO, option to auto-advance every n seconds, or on keypress
     }
 
     // Clean up
