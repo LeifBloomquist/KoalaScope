@@ -5,8 +5,8 @@
 #include <conio.h>
 #include <time.h>
 
-#define BASE_URL "http://192.168.7.114/test/"
-//#define BASE_URL "http://vortex.jammingsignal.com:8064/ml/koala/"
+//#define BASE_URL "http://192.168.7.114/test/"
+#define BASE_URL "http://vortex.jammingsignal.com:8064/ml/koala/"
 
 #define COLOR_TEMP_ADDR 0xC100
 
@@ -124,44 +124,80 @@ int sleep_or_key(unsigned wait)
     return 0;
 }
 
+void pause_on_shift()
+{
+    while (PEEK(0x028D))
+    {
+        ; // Pause
+    }
+}
 
 void main() 
 {
-    int dev;
-    int count;
-    int result;
-
-    clrscr();
-    cprintf("KoalaScope starting...\n\r\n\r");
+    int dev = 8;
+    int count = 0;
+    int result = 0;
+    int timeout = 5;
+    int loop = 1;
+    int blank_on_load = 0;
 
     dev = PEEK(0x00ba); /* get current device number */
 
-    /* Get # of images available */
-    cbm_load(BASE_URL"count.prg", dev, NULL);
-    count = PEEKW(0xC000);
-
-    cprintf("%d Koala images on server.\n\r\n\rPress any key to start.", count);
-    cgetc();
-
     while (1)
     {
-        // TODO, blank screen, or eventually use double buffering for smooth transition        
-        koala_screen();
-        result = LoadKoalaPictureAndDisplay((unsigned char*)BASE_URL"random.koa");
+        /* Get # of images available */
+        cbm_load(BASE_URL"count.prg", dev, NULL);
+        count = PEEKW(0xC000);
 
-        if (result != 0)
+        text_screen();
+        clrscr();
+        cprintf("KoalaScope starting...\n\r\n\r");
+        cprintf("%d Koala images on server.\n\r\n\r", count);
+        cprintf("Keys during display:\n\r\n\r SPACE to advance to next picture\n\r SHIFT to pause\n\r F1    to return to this screen\n\r STOP  to exit\n\r\n\r");
+        cprintf("Press any key to start.");
+        cgetc();
+
+        loop = 1;
+        while (loop)
         {
-            text_screen();
-            bordercolor(2);
-            cgetc();
-            continue;
-        }
+            // TODO, blank screen, or eventually use double buffering for smooth transition        
+            koala_screen();
+            result = LoadKoalaPictureAndDisplay((unsigned char*)BASE_URL"random.koa");
 
-        sleep_or_key(5);
+            if (result != 0)
+            {
+                text_screen();
+                bordercolor(2);
+                cgetc();
+                continue;
+            }
+
+            result = sleep_or_key(timeout);
+
+            switch (result)
+            {
+                case ' ':
+                    continue;
+
+                case 3:  // RUN-STOP
+                    goto cleanup;                   
+
+                case 133: // F1
+                    loop = 0;
+                    break;
+
+                default:                    
+                    break;
+            }
+
+            pause_on_shift();
+        }
     }
 
+cleanup:
     // Clean up
     text_screen();
     clrscr();
+    cprintf("KoalaScope Exited\n\r");
     POKE(198, 0); /* clear keyboard queue */
 }
