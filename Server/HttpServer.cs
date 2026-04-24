@@ -66,6 +66,8 @@ public class HttpServer
                     UInt32 num_files = _filecollection.GetFileCount();
                     int chosen = random.Next((int)num_files);
 
+                    Console.WriteLine($"Sending random file #[{chosen}] out of [{num_files}] with filename [{_filecollection.GetFileNames()[chosen]}]");
+
                     response_bytes = _filecollection.GetFileContents(chosen);
 
                     response.OutputStream.Write(response_bytes);
