@@ -46,8 +46,8 @@ int LoadKoalaPictureAndDisplay(unsigned char* koala_filename)
         return(1);
     }
 
-    // make sure load address is $4400 or $6000
-    if (addr[0] != 0 || (addr[1] != 0x44 && addr[1] != 0x60)) {
+    // make sure load address is $4400 or $6000 - also allow $2000 and $0000 for images from Tom's Gallery
+    if (addr[0] != 0 || (addr[1] != 0x44 && addr[1] != 0x60 && addr[1] != 0x20 && addr[1] != 0x00)) {
         cbm_close(1);
         cprintf("This doesn't look like a koala picture.\n");
         return(2);
@@ -168,7 +168,7 @@ void main()
             {
                 text_screen();
                 bordercolor(2);
-                cgetc();
+                sleep_or_key(timeout);
                 continue;
             }
 
