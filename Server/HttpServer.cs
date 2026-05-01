@@ -76,11 +76,11 @@ public class HttpServer
                     response_bytes = _filecollection.GetFileContents(chosen);
                 }
 
-                if (request.RawUrl.Equals(path + "latest" + Constants.KOA))
+                if (request.RawUrl.Equals(path + "synced" + Constants.KOA))
                 {
-                    int latest = TimedCounter.CurrentCount;
-                    Console.WriteLine($"Sending latest file #[{latest}] out of [{num_files}] total with filename [{_filecollection.GetFileNames()[latest]}]");
-                    response_bytes = _filecollection.GetFileContents(latest);
+                    int current = TimedCounter.CurrentCount;
+                    Console.WriteLine($"Sending current file #[{current}] out of [{num_files}] total with filename [{_filecollection.GetFileNames()[current]}]");
+                    response_bytes = _filecollection.GetFileContents(current);
                 }
 
                 if (request.RawUrl.StartsWith(path + "index" + Constants.KOA))

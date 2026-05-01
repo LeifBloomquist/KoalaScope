@@ -20,7 +20,7 @@
 enum Mode 
 {
     RANDOM,
-    LATEST,
+    SYNCED,
     INDEX
 };
 
@@ -177,14 +177,14 @@ void main()
         cprintf("KoalaScope starting...\n\r\n\r");
         cprintf("%d Koala images on server.\n\r\n\r", count);
         cprintf("Keys during display:\n\r\n\r SPACE to advance to next picture\n\r +/-   to move forward/backward*\n\r SHIFT to pause\n\r F1    to return to this screen\n\r STOP  to exit\n\r\n\r");
-        cprintf("Select Mode to Start:\r\n\r\n R=Random, L=Latest, I=Index*\n\r");
+        cprintf("Select Mode to Start:\r\n\r\n R=Random  S=Synchronized  I=Index*\n\r");
         c = cgetc();
 
         switch (c)
         {
-            case 'l':
-                mode = LATEST;
-                strcpy(path, BASE_URL"latest.koa");
+            case 's':
+                mode = SYNCED;
+                strcpy(path, BASE_URL"synced.koa");
                 break;
 
             case 'i': 
