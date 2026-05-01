@@ -4,8 +4,9 @@
 #include <cbm.h>
 #include <peekpoke.h>
 #include <conio.h>
-//#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 #ifdef LOCAL
@@ -125,29 +126,27 @@ void text_screen()
     POKE(0xd021, 0x06);
 }
 
-/*
-
-int input_int()   // Do it the hard way since we don't have memory for cscanf etc.
+unsigned int input_int()   // Do it the hard way since we don't have memory for cscanf etc.
 {    
-    int value_input = 0;        
-    int ch = getchar();
+    unsigned int value_input = 0;
+    char ch = ' ';
+    cursor(1);
 
-    while (ch >= 0 && ch != '\n')
+    while (ch != '\n')
     {
         if (ch >= '0' && ch <= '9')
         {
             value_input = value_input * 10 + (ch - '0');
+            cprintf("%c", ch);
         }
-        ch = getchar();
-    } 
-        
+        ch = cgetc();
+    }
+
+    cursor(0);
     return value_input;
 }
 
-*/
-
-
-int sleep_or_key(unsigned wait)
+char sleep_or_key(unsigned wait)
 {
     clock_t goal = clock() + ((clock_t)wait) * CLOCKS_PER_SEC;
     while ((long)(goal - clock()) > 0)
@@ -171,13 +170,14 @@ void pause_on_shift()
 void main() 
 {
     int dev = 8;
-    int count = 0;
+    unsigned int count = 0;
     int result = 0;
     int timeout = 5;
     int loop = 1;
     int index = 0;    
     int blank_on_load = 0;
     char *path;
+    char numbuf[20];
     char c = ' ';
     enum Mode mode = RANDOM;
 
@@ -208,9 +208,9 @@ void main()
                 mode = INDEX;
                 path = BASE_URL"index.koa?index=000000000";
 
-             //   cprintf("Starting index? ");
-            //    index = input_int();
-            //    if (index >= count) index = count-1;
+                cprintf("Starting index? ");
+                index = input_int();
+                if (index >= count) index = count-1;
                 break;
 
             case 3:  // RUN-STOP
@@ -229,26 +229,26 @@ void main()
         {
             if (mode == INDEX)
             {
-                sprintf(path, BASE_URL"index.koa?index=%d", index);
+                itoa(index, numbuf, 10);
+                strcpy(path, BASE_URL"index.koa?index=");
+                strcat(path, numbuf);
             }
 
             // TODO, blank screen, or eventually use double buffering for smooth transition        
             koala_screen();
             result = LoadKoalaPictureAndDisplay(path);
 
-            if (result != 0)
+            if (result != 0)   // Show error message briefly
             {
-                text_screen();
+                text_screen();  
                 bordercolor(2);
-                sleep_or_key(timeout);
-                continue;
-            }
+            } 
 
             result = sleep_or_key(timeout);
 
             switch (result)
             {
-                case 0:    // Timeout
+                case 0:    // Timeout                    
                 case ' ':
                     if (mode == INDEX)
                     {
