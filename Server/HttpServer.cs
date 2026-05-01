@@ -56,34 +56,48 @@ public class HttpServer
 
             byte[] response_bytes = [];
 
-            if (request.HttpMethod != HttpMethod.Head.ToString())
+            if (request.HttpMethod == HttpMethod.Get.ToString())
             {
                 if (request.RawUrl == null) return;
                 if (_filecollection == null) return;
 
-                if (request.RawUrl.Equals(path + "random" + Constants.KOA))
-                {
-                    UInt32 num_files = _filecollection.GetFileCount();
-                    int chosen = random.Next((int)num_files);
-
-                    Console.WriteLine($"Sending random file #[{chosen}] out of [{num_files}] with filename [{_filecollection.GetFileNames()[chosen]}]");
-
-                    response_bytes = _filecollection.GetFileContents(chosen);
-
-                    response.OutputStream.Write(response_bytes);
-                    response.OutputStream.Flush();
-                }
+                UInt32 num_files = _filecollection.GetFileCount();
 
                 if (request.RawUrl.Equals(path + "count.prg"))
                 {
-                    UInt32 num_files = _filecollection.GetFileCount();
                     byte[] b = BitConverter.GetBytes(num_files);
-
                     response_bytes = [0x00, 0xC0, b[0], b[1], b[2], b[3]];
+                }
 
+                if (request.RawUrl.Equals(path + "random" + Constants.KOA))
+                {                    
+                    int chosen = random.Next((int)num_files);
+                    Console.WriteLine($"Sending random file #[{chosen}] out of [{num_files}] total with filename [{_filecollection.GetFileNames()[chosen]}]");
+                    response_bytes = _filecollection.GetFileContents(chosen);
+                }
+
+                if (request.RawUrl.Equals(path + "latest" + Constants.KOA))
+                {
+                    int latest = TimedCounter.CurrentCount;
+                    Console.WriteLine($"Sending latest file #[{latest}] out of [{num_files}] total with filename [{_filecollection.GetFileNames()[latest]}]");
+                    response_bytes = _filecollection.GetFileContents(latest);
+                }
+
+                if (request.RawUrl.StartsWith(path + "index" + Constants.KOA))
+                {
+                    int index = 0;
+                    string[] parts = request.RawUrl.Split("?index=");
+                    Int32.TryParse(parts[1], out index);
+
+                    Console.WriteLine($"Sending indexed file #[{index}] out of [{num_files}] total with filename [{_filecollection.GetFileNames()[index]}]");
+                    response_bytes = _filecollection.GetFileContents(index);
+                }
+
+                if (response_bytes.Length > 0)
+                {
                     response.OutputStream.Write(response_bytes);
                     response.OutputStream.Flush();
-                }
+                }                
             }
 
             response.OutputStream.Close();

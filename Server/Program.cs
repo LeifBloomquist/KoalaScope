@@ -26,6 +26,7 @@
             }
 
             FileCollection fileCollection = new(args[0], "*" + Constants.KOA);
+            TimedCounter.Start(5000, fileCollection);
             new HttpServer().Start(local, fileCollection);
 
             await Task.Delay(Timeout.Infinite, Cts.Token);

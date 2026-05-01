@@ -1,14 +1,29 @@
+/* KoalaClient.c */
 /* cc65 koala viewer to load and display */
 
 #include <cbm.h>
 #include <peekpoke.h>
 #include <conio.h>
+#include <string.h>
+#include <stdio.h>
 #include <time.h>
 
-//#define BASE_URL "http://192.168.7.114/test/"
+#ifdef LOCAL
+#define BASE_URL "http://192.168.7.114/test/"
+#else
 #define BASE_URL "http://vortex.jammingsignal.com:8064/ml/koala/"
+#endif
 
-#define COLOR_TEMP_ADDR 0xC100
+#define COUNT_ADDR      0xC000
+#define COLOR_TEMP_ADDR 0xC010
+
+enum Mode 
+{
+    RANDOM,
+    LATEST,
+    INDEX
+};
+
 
 unsigned char loadtoram(unsigned char lfn, unsigned char* dest, unsigned int length) {
     int l;
@@ -26,15 +41,16 @@ unsigned char loadtoram(unsigned char lfn, unsigned char* dest, unsigned int len
     return(0); /* ok */
 }
 
-int LoadKoalaPictureAndDisplay(unsigned char* koala_filename) 
+int LoadKoalaPictureAndDisplay(char* koala_filename) 
 {
     unsigned char dev;
     unsigned char addr[2];
 
-    dev = PEEK(0x00ba); /* get current device number */
+    dev = PEEK(0x00BA); /* get current device number */
 
     /* open the file */
     if (cbm_open(1, dev, 2, (const char *)koala_filename)) {
+        clrscr();
         cprintf("Couldn't open %s.\n", koala_filename);
         return(1);
     }
@@ -42,13 +58,15 @@ int LoadKoalaPictureAndDisplay(unsigned char* koala_filename)
     /* read file load address */
     if (cbm_read(1, &addr, 2) != 2) {
         cbm_close(1);
+        clrscr();
         cprintf("Couldn't read load address.\n");
         return(1);
     }
 
-    // make sure load address is $4400 or $6000 - also allow $2000 and $0000 for images from Tom's Gallery
+    // make sure load address is $4400 or $6000 - also allow $2000 and $0000 for images from Tom's Editor Gallery
     if (addr[0] != 0 || (addr[1] != 0x44 && addr[1] != 0x60 && addr[1] != 0x20 && addr[1] != 0x00)) {
         cbm_close(1);
+        clrscr();
         cprintf("This doesn't look like a koala picture.\n");
         return(2);
     }
@@ -56,6 +74,7 @@ int LoadKoalaPictureAndDisplay(unsigned char* koala_filename)
     /* load bitmap data */
     if (loadtoram(1, (unsigned char*)0x2000, 8000)) {
         cbm_close(1);
+        clrscr();
         cprintf("Error while reading bitmap.\n");
         return(1);
     }
@@ -139,7 +158,11 @@ void main()
     int result = 0;
     int timeout = 5;
     int loop = 1;
+    int index = 0;    
     int blank_on_load = 0;
+    char path[100] = "";
+    char c = ' ';
+    enum Mode mode = RANDOM;
 
     dev = PEEK(0x00ba); /* get current device number */
 
@@ -147,22 +170,50 @@ void main()
     {
         /* Get # of images available */
         cbm_load(BASE_URL"count.prg", dev, NULL);
-        count = PEEKW(0xC000);
+        count = PEEKW(COUNT_ADDR);  // TODO, use long once more than 65536 images :-)
 
         text_screen();
         clrscr();
         cprintf("KoalaScope starting...\n\r\n\r");
         cprintf("%d Koala images on server.\n\r\n\r", count);
-        cprintf("Keys during display:\n\r\n\r SPACE to advance to next picture\n\r SHIFT to pause\n\r F1    to return to this screen\n\r STOP  to exit\n\r\n\r");
-        cprintf("Press any key to start.");
-        cgetc();
+        cprintf("Keys during display:\n\r\n\r SPACE to advance to next picture\n\r +/-   to move forward/backward*\n\r SHIFT to pause\n\r F1    to return to this screen\n\r STOP  to exit\n\r\n\r");
+        cprintf("Select Mode to Start:\r\n\r\n R=Random, L=Latest, I=Index*\n\r");
+        c = cgetc();
+
+        switch (c)
+        {
+            case 'l':
+                mode = LATEST;
+                strcpy(path, BASE_URL"latest.koa");
+                break;
+
+            case 'i': 
+                mode = INDEX;
+                strcpy(path, BASE_URL"index.koa");
+                break;
+
+            case 3:  // RUN-STOP
+                goto cleanup;
+
+            case ' ':
+            case 'r':
+            default:
+                mode = RANDOM;
+                strcpy(path, BASE_URL"random.koa");
+                break;
+        }
 
         loop = 1;
         while (loop)
         {
+            if (mode == INDEX)
+            {
+                sprintf(path, BASE_URL"index.koa?index=%d", index);
+            }
+
             // TODO, blank screen, or eventually use double buffering for smooth transition        
             koala_screen();
-            result = LoadKoalaPictureAndDisplay((unsigned char*)BASE_URL"random.koa");
+            result = LoadKoalaPictureAndDisplay(path);
 
             if (result != 0)
             {
@@ -176,7 +227,18 @@ void main()
 
             switch (result)
             {
+                case 0:  // Timeout    
+                    continue;
+
                 case ' ':
+                    if (mode == INDEX)
+                    {
+                        index++;
+                        if (index >= count)
+                        {
+                            index = 0;  // Wrap
+                        }
+                    }
                     continue;
 
                 case 3:  // RUN-STOP
@@ -186,7 +248,23 @@ void main()
                     loop = 0;
                     break;
 
-                default:                    
+                case '+':
+                    index++;
+                    if (index >= count)
+                    {
+                        index = 0;  // Wrap
+                    }
+                    break;
+
+                case '-':
+                    index--;
+                    if (index < 0)
+                    {
+                        index = count - 1;  // Wrap
+                    }
+                    break;
+
+                default:                 
                     break;
             }
 
