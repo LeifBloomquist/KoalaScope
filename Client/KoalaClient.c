@@ -4,12 +4,12 @@
 #include <cbm.h>
 #include <peekpoke.h>
 #include <conio.h>
-#include <string.h>
+//#include <string.h>
 #include <stdio.h>
 #include <time.h>
 
 #ifdef LOCAL
-#define BASE_URL "http://192.168.7.114/test/"
+#define BASE_URL "http://192.168.7.99/test/"
 #else
 #define BASE_URL "http://vortex.jammingsignal.com:8064/ml/koala/"
 #endif
@@ -41,6 +41,12 @@ unsigned char loadtoram(unsigned char lfn, unsigned char* dest, unsigned int len
     return(0); /* ok */
 }
 
+void error(char* message)
+{
+    clrscr();
+    cprintf("%s\n", message);
+}
+
 int LoadKoalaPictureAndDisplay(char* koala_filename) 
 {
     unsigned char dev;
@@ -50,56 +56,45 @@ int LoadKoalaPictureAndDisplay(char* koala_filename)
 
     /* open the file */
     if (cbm_open(1, dev, 2, (const char *)koala_filename)) {
-        clrscr();
-        cprintf("Couldn't open %s.\n", koala_filename);
+        error("Couldn't open file.");
         return(1);
     }
 
     /* read file load address */
     if (cbm_read(1, &addr, 2) != 2) {
         cbm_close(1);
-        clrscr();
-        cprintf("Couldn't read load address.\n");
+        error("Couldn't read load address.\n");
         return(1);
     }
 
     // make sure load address is $4400 or $6000 - also allow $2000 and $0000 for images from Tom's Editor Gallery
     if (addr[0] != 0 || (addr[1] != 0x44 && addr[1] != 0x60 && addr[1] != 0x20 && addr[1] != 0x00)) {
         cbm_close(1);
-        clrscr();
-        cprintf("This doesn't look like a koala picture.\n");
+        error("This doesn't look like a koala picture.\n");
         return(2);
     }
 
     /* load bitmap data */
     if (loadtoram(1, (unsigned char*)0x2000, 8000)) {
-        cbm_close(1);
-        clrscr();
-        cprintf("Error while reading bitmap.\n");
+        cbm_close(1);        
         return(1);
     }
 
     /* load screen data */
     if (loadtoram(1, (unsigned char*)0x0400, 1000)) {
-        cbm_close(1);
-        clrscr();
-        cprintf("Error while reading screen ram.\n");
+        cbm_close(1);      
         return(1);
     }
 
     /* load colour ram */
     if (loadtoram(1, (unsigned char*)0xd800, 1000)) {
         cbm_close(1);
-        clrscr();
-        cprintf("Error while reading colour ram.\n");
         return(1);
     }
 
     /* load background+border colour into $C100 temporarily */
     if (loadtoram(1, (unsigned char*)COLOR_TEMP_ADDR, 1)) {
         cbm_close(1);
-        clrscr();
-        cprintf("Error while reading background colour.\n");
         return(1);
     }
 
@@ -129,6 +124,28 @@ void text_screen()
     POKE(0xd020, 0x0e);
     POKE(0xd021, 0x06);
 }
+
+/*
+
+int input_int()   // Do it the hard way since we don't have memory for cscanf etc.
+{    
+    int value_input = 0;        
+    int ch = getchar();
+
+    while (ch >= 0 && ch != '\n')
+    {
+        if (ch >= '0' && ch <= '9')
+        {
+            value_input = value_input * 10 + (ch - '0');
+        }
+        ch = getchar();
+    } 
+        
+    return value_input;
+}
+
+*/
+
 
 int sleep_or_key(unsigned wait)
 {
@@ -160,7 +177,7 @@ void main()
     int loop = 1;
     int index = 0;    
     int blank_on_load = 0;
-    char path[100] = "";
+    char *path;
     char c = ' ';
     enum Mode mode = RANDOM;
 
@@ -177,19 +194,23 @@ void main()
         cprintf("KoalaScope starting...\n\r\n\r");
         cprintf("%d Koala images on server.\n\r\n\r", count);
         cprintf("Keys during display:\n\r\n\r SPACE to advance to next picture\n\r +/-   to move forward/backward*\n\r SHIFT to pause\n\r F1    to return to this screen\n\r STOP  to exit\n\r\n\r");
-        cprintf("Select Mode to Start:\r\n\r\n R=Random  S=Synchronized  I=Index*\n\r");
+        cprintf("Select mode to start:\r\n\r\n R=Random  S=Synchronized  I=Index*\n\r\n\r");
         c = cgetc();
 
         switch (c)
         {
             case 's':
                 mode = SYNCED;
-                strcpy(path, BASE_URL"synced.koa");
+                path = BASE_URL"synced.koa";
                 break;
 
             case 'i': 
                 mode = INDEX;
-                strcpy(path, BASE_URL"index.koa");
+                path = BASE_URL"index.koa?index=000000000";
+
+             //   cprintf("Starting index? ");
+            //    index = input_int();
+            //    if (index >= count) index = count-1;
                 break;
 
             case 3:  // RUN-STOP
@@ -199,7 +220,7 @@ void main()
             case 'r':
             default:
                 mode = RANDOM;
-                strcpy(path, BASE_URL"random.koa");
+                path=BASE_URL"random.koa";
                 break;
         }
 
@@ -227,9 +248,7 @@ void main()
 
             switch (result)
             {
-                case 0:  // Timeout    
-                    continue;
-
+                case 0:    // Timeout
                 case ' ':
                     if (mode == INDEX)
                     {
