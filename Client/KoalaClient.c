@@ -1,7 +1,7 @@
 /* KoalaClient.c */
 /* cc65 koala viewer to load and display */
 
-#include <cbm.h>
+#include <c64.h>
 #include <peekpoke.h>
 #include <conio.h>
 #include <stdio.h>
@@ -25,7 +25,6 @@ enum Mode
     INDEX
 };
 
-
 unsigned char loadtoram(unsigned char lfn, unsigned char* dest, unsigned int length) {
     int l;
 
@@ -45,6 +44,7 @@ unsigned char loadtoram(unsigned char lfn, unsigned char* dest, unsigned int len
 void error(char* message)
 {
     clrscr();
+    textcolor(COLOR_WHITE);
     cprintf("%s\n", message);
 }
 
@@ -169,7 +169,7 @@ void pause_on_shift()
 
 void main() 
 {
-    int dev = 8;
+    int dev = 9;
     unsigned int count = 0;
     int result = 0;
     int timeout = 5;
@@ -181,19 +181,43 @@ void main()
     char c = ' ';
     enum Mode mode = RANDOM;
 
-    dev = PEEK(0x00ba); /* get current device number */
-
     while (1)
     {
-        /* Get # of images available */
-        cbm_load(BASE_URL"count.prg", dev, NULL);
-        count = PEEKW(COUNT_ADDR);  // TODO, use long once more than 65536 images :-)
-
+        /* Initialize Screen */
         text_screen();
         clrscr();
-        cprintf("KoalaScope starting...\n\r\n\r");
-        cprintf("%d Koala images on server.\n\r\n\r", count);
+        bgcolor(COLOR_BLACK);
+        bordercolor(COLOR_BLUE);
+        textcolor(COLOR_LIGHTGREEN);
+
+        cprintf("\n\r             Koala");
+        textcolor(COLOR_YELLOW);
+        cprintf("Scope!");
+#ifdef LOCAL
+        textcolor(COLOR_RED);
+        cprintf(" LOCAL");
+#endif   
+
+        /* Get # of images available */
+        result = cbm_load(BASE_URL"count.prg", dev, NULL);
+
+        if (result == 0)
+        {
+            textcolor(COLOR_RED);
+            cprintf("\n\r\n\rERROR: No response from server.");
+            while (1);
+        }
+
+        count = PEEKW(COUNT_ADDR);  // TODO, use long once more than 65536 images :-)
+         
+        textcolor(COLOR_WHITE);
+        cprintf("\n\r\n\r     %d ", count);
+        textcolor(COLOR_LIGHTRED);
+        
+        cprintf("Koala images on server.\n\r\n\r");
+        textcolor(COLOR_GRAY3);
         cprintf("Keys during display:\n\r\n\r SPACE to advance to next picture\n\r +/-   to move forward/backward*\n\r SHIFT to pause\n\r F1    to return to this screen\n\r STOP  to exit\n\r\n\r");
+        textcolor(COLOR_GREEN);
         cprintf("Select mode to start:\r\n\r\n R=Random  S=Synchronized  I=Index*\n\r\n\r");
         c = cgetc();
 

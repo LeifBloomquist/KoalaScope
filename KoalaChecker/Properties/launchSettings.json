@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "KoalaChecker": {
+      "commandName": "Project",
+      "commandLineArgs": " D:\\Koala\\ D:\\Koala-Buggy\\"
+    }
+  }
+}

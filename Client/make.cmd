@@ -6,5 +6,4 @@ cl65 -Osir -t c64 -C c64-koala.cfg          KoalaClient.c -o koalascope.prg    -
 cl65 -Osir -t c64 -C c64-koala.cfg -D LOCAL KoalaClient.c -o localkoalasc.prg
 echo.
 dir *.prg
-copy koalascope.prg w:\
-copy localkoalasc.prg w:\
+copy *.prg w:\
