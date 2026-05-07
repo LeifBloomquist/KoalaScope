@@ -25,6 +25,12 @@ enum Mode
     INDEX
 };
 
+/* Global Variables */
+unsigned char dev = 8;
+int count = 0;  // Signed for comparisons
+int index = 0;
+int index_direction = 1;
+
 unsigned char loadtoram(unsigned char lfn, unsigned char* dest, unsigned int length) {
     int l;
 
@@ -50,10 +56,7 @@ void error(char* message)
 
 int LoadKoalaPictureAndDisplay(char* koala_filename) 
 {
-    unsigned char dev;
     unsigned char addr[2];
-
-    dev = PEEK(0x00BA); /* get current device number */
 
     /* open the file */
     if (cbm_open(1, dev, 2, (const char *)koala_filename)) {
@@ -167,19 +170,32 @@ void pause_on_shift()
     }
 }
 
+void update_index()
+{
+    index += index_direction;
+
+    if (index >= count)
+    {
+        index = 0;  // Wrap
+    }
+    if (index < 0)
+    {
+        index = count - 1;  // Wrap
+    }
+}
+
 void main() 
 {
-    int dev = 9;
-    unsigned int count = 0;
     int result = 0;
     int timeout = 5;
-    int loop = 1;
-    int index = 0;    
-    int blank_on_load = 0;
+    char loop = 1;
+    char blank_on_load = 0;
     char *path;
     char numbuf[20];
     char c = ' ';
     enum Mode mode = RANDOM;
+
+    dev = PEEK(0x00BA);   // Always use current drive#, as it's guaranteed to be enabled.
 
     while (1)
     {
@@ -189,7 +205,6 @@ void main()
         bgcolor(COLOR_BLACK);
         bordercolor(COLOR_BLUE);
         textcolor(COLOR_LIGHTGREEN);
-
         cprintf("\n\r             Koala");
         textcolor(COLOR_YELLOW);
         cprintf("Scope!");
@@ -205,7 +220,8 @@ void main()
         {
             textcolor(COLOR_RED);
             cprintf("\n\r\n\rERROR: No response from server.");
-            while (1);
+            sleep_or_key(10);
+            continue;
         }
 
         count = PEEKW(COUNT_ADDR);  // TODO, use long once more than 65536 images :-)
@@ -223,6 +239,13 @@ void main()
 
         switch (c)
         {
+            case CH_F1:
+            case CH_F5:
+                continue;
+
+            case 3:  // RUN-STOP
+                goto cleanup;
+
             case 's':
                 mode = SYNCED;
                 path = BASE_URL"synced.koa";
@@ -237,9 +260,6 @@ void main()
                 if (index >= count) index = count-1;
                 break;
 
-            case 3:  // RUN-STOP
-                goto cleanup;
-
             case ' ':
             case 'r':
             default:
@@ -249,6 +269,8 @@ void main()
         }
 
         loop = 1;
+        index_direction = 1;
+
         while (loop)
         {
             if (mode == INDEX)
@@ -258,8 +280,8 @@ void main()
                 strcat(path, numbuf);
             }
 
-            // TODO, blank screen, or eventually use double buffering for smooth transition        
-            koala_screen();
+            // TODO, blank screen, or eventually use double buffering for smooth transition 
+            koala_screen();     
             result = LoadKoalaPictureAndDisplay(path);
 
             if (result != 0)   // Show error message briefly
@@ -276,35 +298,25 @@ void main()
                 case ' ':
                     if (mode == INDEX)
                     {
-                        index++;
-                        if (index >= count)
-                        {
-                            index = 0;  // Wrap
-                        }
+                        update_index();
                     }
-                    continue;
+                    break;
 
                 case 3:  // RUN-STOP
                     goto cleanup;                   
 
-                case 133: // F1
+                case CH_F1:
                     loop = 0;
                     break;
 
                 case '+':
-                    index++;
-                    if (index >= count)
-                    {
-                        index = 0;  // Wrap
-                    }
+                    index_direction = 1;
+                    update_index();
                     break;
 
                 case '-':
-                    index--;
-                    if (index < 0)
-                    {
-                        index = count - 1;  // Wrap
-                    }
+                    index_direction = -1;
+                    update_index();
                     break;
 
                 default:                 
