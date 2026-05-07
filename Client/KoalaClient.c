@@ -218,7 +218,7 @@ void main()
         textcolor(COLOR_GRAY3);
         cprintf("Keys during display:\n\r\n\r SPACE to advance to next picture\n\r +/-   to move forward/backward*\n\r SHIFT to pause\n\r F1    to return to this screen\n\r STOP  to exit\n\r\n\r");
         textcolor(COLOR_GREEN);
-        cprintf("Select mode to start:\r\n\r\n R=Random  S=Synchronized  I=Index*\n\r\n\r");
+        cprintf("Select mode to start:\r\n\r\n R=Random  S=Synchronized  I=Indexed*\n\r\n\r");
         c = cgetc();
 
         switch (c)
