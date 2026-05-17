@@ -1,555 +1,569 @@
 Modules list:
 -------------
 KoalaClient.o:
-    CODE              Offs=000000  Size=0005A4  Align=00001  Fill=0000
-    RODATA            Offs=000000  Size=000309  Align=00001  Fill=0000
-    BSS               Offs=000000  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000000  Size=000007  Align=00001  Fill=0000
+    CODE              Offs=000000  Size=000609  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=00033B  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=00000E  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=00000B  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(_cursor.o):
-    CODE              Offs=0005A4  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=000309  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000000  Size=000001  Align=00001  Fill=0000
-    DATA              Offs=000007  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000609  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=00033B  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00000E  Size=000001  Align=00001  Fill=0000
+    DATA              Offs=00000B  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(_hextab.o):
-    CODE              Offs=0005A4  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=000309  Size=000010  Align=00001  Fill=0000
-    BSS               Offs=000001  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000007  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000609  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=00033B  Size=000010  Align=00001  Fill=0000
+    BSS               Offs=00000F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000B  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(_longminstr.o):
-    CODE              Offs=0005A4  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=000319  Size=00000C  Align=00001  Fill=0000
-    BSS               Offs=000001  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000007  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000609  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=00034B  Size=00000C  Align=00001  Fill=0000
+    BSS               Offs=00000F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000B  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(_oserror.o):
-    CODE              Offs=0005A4  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000001  Size=000001  Align=00001  Fill=0000
-    DATA              Offs=000007  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000609  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00000F  Size=000001  Align=00001  Fill=0000
+    DATA              Offs=00000B  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(_printf.o):
-    CODE              Offs=0005A4  Size=0003A4  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000002  Size=00002B  Align=00001  Fill=0000
-    DATA              Offs=000007  Size=000003  Align=00001  Fill=0000
+    CODE              Offs=000609  Size=0003A4  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000010  Size=00002B  Align=00001  Fill=0000
+    DATA              Offs=00000B  Size=000003  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(addysp.o):
-    CODE              Offs=000948  Size=00000E  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000A  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=0009AD  Size=00000E  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(axlong.o):
-    CODE              Offs=000956  Size=00000D  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000A  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=0009BB  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+C:\cc65\lib/c64.lib(bneg.o):
+    CODE              Offs=0009C8  Size=00000E  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(bordercolor.o):
-    CODE              Offs=000963  Size=000008  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000A  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=0009D6  Size=000008  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(c_close.o):
-    CODE              Offs=00096B  Size=000004  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000A  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=0009DE  Size=000004  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(c_load.o):
-    CODE              Offs=00096F  Size=00001D  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000A  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=0009E2  Size=00001D  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(c_open.o):
-    CODE              Offs=00098C  Size=000009  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000A  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=0009FF  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(c_setlfs.o):
-    CODE              Offs=000995  Size=00000E  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000A  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000A08  Size=00000E  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(c_setnam.o):
-    CODE              Offs=0009A3  Size=000013  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000A  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000A16  Size=000013  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(callmain.o):
-    CODE              Offs=0009B6  Size=000017  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000A  Size=000004  Align=00001  Fill=0000
+    CODE              Offs=000A29  Size=000017  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00000E  Size=000004  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(cbm_close.o):
-    CODE              Offs=0009CD  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000A40  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000012  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(cbm_load.o):
-    CODE              Offs=0009CD  Size=000044  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000A40  Size=000044  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000012  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(cbm_open.o):
-    CODE              Offs=000A11  Size=000010  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000A84  Size=000010  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000012  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(cbm_read.o):
-    CODE              Offs=000A21  Size=00005B  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000A94  Size=00005B  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000012  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(cgetc.o):
-    CODE              Offs=000A7C  Size=000047  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000AEF  Size=000047  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000012  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(clock.o):
-    CODE              Offs=000AC3  Size=00000A  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000B36  Size=00000A  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000012  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(clrscr.o):
-    CODE              Offs=000ACD  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000B40  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000012  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(color.o):
-    CODE              Offs=000ACD  Size=000010  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000E  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000B40  Size=000010  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000012  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(condes.o):
-    CODE              Offs=000ADD  Size=00000C  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00000E  Size=000025  Align=00001  Fill=0000
+    CODE              Offs=000B50  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000012  Size=000025  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
     ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(conio.o):
-    CODE              Offs=000AE9  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000B5C  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(cprintf.o):
-    CODE              Offs=000AE9  Size=00002A  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002D  Size=000001  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000B5C  Size=00002A  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003B  Size=000001  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(cputc.o):
-    CODE              Offs=000B13  Size=00006D  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000B86  Size=00006D  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(crt0.o):
-    CODE              Offs=000B80  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000BF3  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
     STARTUP           Offs=000000  Size=000033  Align=00001  Fill=0000
     ONCE              Offs=00000C  Size=00001A  Align=00001  Fill=0000
     INIT              Offs=000000  Size=00001C  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(ctype.o):
-    CODE              Offs=000B80  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=000325  Size=00008B  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000BF3  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000357  Size=00008B  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(ctypemask.o):
-    CODE              Offs=000B80  Size=00001E  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000BF3  Size=00001E  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(cursor.o):
-    CODE              Offs=000B9E  Size=00000A  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C11  Size=00000A  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+C:\cc65\lib/c64.lib(decsp1.o):
+    CODE              Offs=000C1B  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(decsp2.o):
-    CODE              Offs=000BA8  Size=00000D  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C24  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(decsp3.o):
-    CODE              Offs=000BB5  Size=00000D  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C31  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(decsp4.o):
-    CODE              Offs=000BC2  Size=00000D  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C3E  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(decsp5.o):
-    CODE              Offs=000BCF  Size=00000D  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C4B  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(decsp6.o):
-    CODE              Offs=000BDC  Size=00000D  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C58  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(exehdr.o):
-    CODE              Offs=000BE9  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C65  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
     EXEHDR            Offs=000000  Size=00000C  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(gotoxy.o):
-    CODE              Offs=000BE9  Size=00000D  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C65  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+C:\cc65\lib/c64.lib(incsp1.o):
+    CODE              Offs=000C72  Size=000007  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(incsp2.o):
-    CODE              Offs=000BF6  Size=000016  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C79  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(incsp3.o):
-    CODE              Offs=000C0C  Size=000005  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C8F  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(incsp4.o):
-    CODE              Offs=000C11  Size=000005  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C94  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(incsp5.o):
-    CODE              Offs=000C16  Size=000005  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C99  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(incsp6.o):
-    CODE              Offs=000C1B  Size=000005  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000C9E  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(incsp7.o):
-    CODE              Offs=000C20  Size=000005  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000CA3  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(itoa.o):
-    CODE              Offs=000C25  Size=000094  Align=00001  Fill=0000
-    RODATA            Offs=0003B0  Size=000007  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000CA8  Size=000094  Align=00001  Fill=0000
+    RODATA            Offs=0003E2  Size=000007  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(kbhit.o):
-    CODE              Offs=000CB9  Size=000009  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000D3C  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(kernal.o):
-    CODE              Offs=000CC2  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000D45  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(kplot.o):
-    CODE              Offs=000CC2  Size=00000B  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000D45  Size=00000B  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(ladd.o):
-    CODE              Offs=000CCD  Size=000025  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000D50  Size=000025  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(lcmp.o):
-    CODE              Offs=000CF2  Size=00003B  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000D75  Size=00003B  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(ldaxsp.o):
-    CODE              Offs=000D2D  Size=000009  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000DB0  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(ldeaxysp.o):
-    CODE              Offs=000D36  Size=000013  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000DB9  Size=000013  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(lge.o):
-    CODE              Offs=000D49  Size=000006  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000DCC  Size=000006  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(lmul.o):
-    CODE              Offs=000D4F  Size=00005C  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000DD2  Size=00005C  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(lneg.o):
-    CODE              Offs=000DAB  Size=00001E  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000E2E  Size=00001E  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(loadaddr.o):
-    CODE              Offs=000DC9  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000E4C  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
     LOADADDR          Offs=000000  Size=000002  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(lpush.o):
-    CODE              Offs=000DC9  Size=000021  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000E4C  Size=000021  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(lsub.o):
-    CODE              Offs=000DEA  Size=000027  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000E6D  Size=000027  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(ltoa.o):
-    CODE              Offs=000E11  Size=000095  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000E94  Size=000095  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(makebool.o):
-    CODE              Offs=000EA6  Size=00002C  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000F29  Size=00002C  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(mulax10.o):
-    CODE              Offs=000ED2  Size=000019  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000F55  Size=000019  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(popa.o):
-    CODE              Offs=000EEB  Size=00000C  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000F6E  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(popptr1.o):
-    CODE              Offs=000EF7  Size=00000E  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000F7A  Size=00000E  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(push1.o):
-    CODE              Offs=000F05  Size=000005  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000F88  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(pusha.o):
-    CODE              Offs=000F0A  Size=000016  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000F8D  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(pushax.o):
-    CODE              Offs=000F20  Size=00001A  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000FA3  Size=00001A  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(pushwsp.o):
-    CODE              Offs=000F3A  Size=00001C  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000FBD  Size=00001C  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(status.o):
-    CODE              Offs=000F56  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000FD9  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(staxsp.o):
-    CODE              Offs=000F56  Size=00000B  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000FD9  Size=00000B  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(strcat.o):
-    CODE              Offs=000F61  Size=000031  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=000FE4  Size=000031  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(strcpy.o):
-    CODE              Offs=000F92  Size=00001F  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=001015  Size=00001F  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(strlen.o):
-    CODE              Offs=000FB1  Size=000016  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=001034  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(strlower.o):
-    CODE              Offs=000FC7  Size=000027  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=00104A  Size=000027  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(subeqsp.o):
-    CODE              Offs=000FEE  Size=000015  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
-    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
-    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
-C:\cc65\lib/c64.lib(subysp.o):
-    CODE              Offs=001003  Size=00000D  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=001071  Size=000015  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(vcprintf.o):
-    CODE              Offs=001010  Size=000078  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=000033  Size=000008  Align=00001  Fill=0000
+    CODE              Offs=001086  Size=000078  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000008  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(zerobss.o):
-    CODE              Offs=001088  Size=000023  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00003B  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=0010FE  Size=000023  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00003F  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 C:\cc65\lib/c64.lib(zeropage.o):
-    CODE              Offs=0010AB  Size=000000  Align=00001  Fill=0000
-    RODATA            Offs=0003B7  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00002E  Size=000000  Align=00001  Fill=0000
-    DATA              Offs=00003B  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=001121  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=0003E9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00003C  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00003F  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=00001A  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 
@@ -563,12 +577,12 @@ ZEROPAGE              000002  00001B  00001A  00001
 LOADADDR              0007FF  000800  000002  00001
 EXEHDR                000801  00080C  00000C  00001
 STARTUP               00080D  00083F  000033  00001
-CODE                  000840  0018EA  0010AB  00001
-RODATA                0018EB  001CA1  0003B7  00001
-DATA                  001CA2  001CDC  00003B  00001
-INIT                  001CDD  001CF8  00001C  00001
-BSS                   001CF9  001D26  00002E  00001
-ONCE                  001CF9  001D1E  000026  00001
+CODE                  000840  001960  001121  00001
+RODATA                001961  001D49  0003E9  00001
+DATA                  001D4A  001D88  00003F  00001
+INIT                  001D89  001DA4  00001C  00001
+BSS                   001DA5  001DE0  00003C  00001
+ONCE                  001DA5  001DCA  000026  00001
 
 
 Exports list by name:
@@ -585,7 +599,7 @@ IOBASE                    00FFF3  LA    IOINIT                    00FF84  LA
 KBDREAD                   00E5B4  LA    LISTEN                    00FFB1  LA    
 LOAD                      00FFD5 RLA    MEMBOT                    00FF9C  LA    
 MEMTOP                    00FF99  LA    NMIEXIT                   00FEBC  LA    
-OPEN                      00FFC0 RLA    PLOT                      001502 RLA    
+OPEN                      00FFC0 RLA    PLOT                      001585 RLA    
 RAMTAS                    00FF87  LA    RDTIM                     00FFDE RLA    
 READST                    00FFB7 RLA    RESTOR                    00FF8A  LA    
 SAVE                      00FFD8  LA    SCNKEY                    00FF9F  LA    
@@ -597,186 +611,200 @@ STOP                      00FFE1  LA    TALK                      00FFB4  LA
 TKSA                      00FF96  LA    UDTIM                     00FFEA  LA    
 UNLSN                     00FFAE  LA    UNTLK                     00FFAB  LA    
 UPDCRAMPTR                00EA24  LA    VECTOR                    00FF8D  LA    
-_LoadKoalaPictureAndDisplay 0008CE  LA    __BSS_LOAD__              001CF9  LA    
-__BSS_RUN__               001CF9 RLA    __BSS_SIZE__              00002E REA    
-__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     001D1F RLA    
-__DESTRUCTOR_COUNT__      000000 REA    __DESTRUCTOR_TABLE__      001CA2 RLA    
+_LoadKoalaPictureAndDisplay 0008CE  LA    __BSS_LOAD__              001DA5  LA    
+__BSS_RUN__               001DA5 RLA    __BSS_SIZE__              00003C REA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     001DCB RLA    
+__DESTRUCTOR_COUNT__      000000 REA    __DESTRUCTOR_TABLE__      001D4A RLA    
 __EXEHDR__                000001 REA    __HEADER_FILEOFFS__       000002  EA    
 __HEADER_LAST__           00080D RLA    __HEADER_SIZE__           00000D  EA    
 __HEADER_START__          000801  LA    __HIMEM__                 00D000 REA    
 __KOALA_FILEOFFS__        000000  EA    __KOALA_LAST__            002000  LA    
 __KOALA_SIZE__            001F40  EA    __KOALA_START__           002000  LA    
 __KOALA__                 002000 REA    __LOADADDR__              000001 REA    
-__MAIN_FILEOFFS__         00000E  EA    __MAIN_LAST__             001D1F  LA    
+__MAIN_FILEOFFS__         00000E  EA    __MAIN_LAST__             001DCB  LA    
 __MAIN_SIZE__             0017F3 REA    __MAIN_START__            00080D RLA    
-__ONCE_LOAD__             001CF9  LA    __ONCE_RUN__              001CF9 RLA    
+__ONCE_LOAD__             001DA5  LA    __ONCE_RUN__              001DA5 RLA    
 __ONCE_SIZE__             000026  EA    __STACKSIZE__             000800 REA    
 __STARTUP__               000001 REA    __ZP_FILEOFFS__           000000  EA    
 __ZP_LAST__               00001C  LA    __ZP_SIZE__               00001A  EA    
-__ZP_START__              000002  LA    ___oserror                001CFA RLA    
-__argc                    001CAC  LA    __argv                    001CAE  LA    
-__ctype                   001C10 RLA    __ctypeidx                001C1B RLA    
-__hextab                  001BF4 RLA    __longminstr              001C04 RLA    
-__printf                  000ED7 RLA    _bgcolor                  001315 RLA    
-_bordercolor              0011A3 RLA    _cbm_close                0011AB REA    
-_cbm_k_close              0011AB RLA    _cbm_k_load               0011AF RLA    
-_cbm_k_open               0011CC RLA    _cbm_k_setlfs             0011D5 RLA    
-_cbm_k_setnam             0011E3 RLA    _cbm_load                 00120D RLA    
-_cbm_open                 001251 RLA    _cbm_read                 001261 RLA    
-_cgetc                    0012BC RLA    _clock                    001303 RLA    
-_clrscr                   00E544 REA    _count                    001CA3  LA    
-_cprintf                  001329 RLA    _cputc                    001358 RLA    
-_cputcxy                  001353  LA    _cursor                   0013DE RLA    
-_dev                      001CA2  LA    _error                    0008AF  LA    
-_exit                     000825  LA    _gotoxy                   00142C  LA    
-_index                    001CA5  LA    _index_direction          001CA7  LA    
-_input_int                000A4F  LA    _itoa                     001483 RLA    
-_kbhit                    0014F9 RLA    _koala_screen             000A25  LA    
-_loadtoram                000840  LA    _ltoa                     001669 RLA    
-_main                     000B60 RLA    _pause_on_shift           000B13  LA    
-_sleep_or_key             000AC1  LA    _strcat                   0017A1 RLA    
-_strcpy                   0017D2 RLA    _strlen                   0017F1 RLA    
-_strlower                 001807 RLA    _strlwr                   001807  LA    
-_text_screen              000A35  LA    _textcolor                00130D RLA    
-_ultoa                    0016AA RLA    _update_index             000B19  LA    
-_utoa                     0014C5  LA    _vcprintf                 001898 RLA    
-addysp                    001189 RLA    addysp1                   001188 RLA    
-axlong                    001196 RLA    axulong                   00119C RLA    
-booleq                    0016EC RLA    boolge                    0016FD RLA    
-boolgt                    0016FB  LA    boolle                    0016F3  LA    
-boollt                    0016F5  LA    boolne                    0016E6  LA    
-booluge                   00170D  LA    boolugt                   00170B  LA    
-boolule                   001703  LA    boolult                   001705  LA    
-callmain                  0011F6 RLA    condes                    001CB0  LA    
-cputdirect                001377  LA    ctypemask                 0013C0  LA    
-ctypemaskdirect           0013C4 RLA    cursor                    001CF9 RLA    
-decsp2                    0013E8 RLA    decsp3                    0013F5 RLA    
-decsp4                    001402 RLA    decsp5                    00140F RLA    
-decsp6                    00141C RLA    donelib                   00131D RLA    
-gotoxy                    001429 RLA    incsp2                    00143E RLA    
-incsp3                    00144C RLA    incsp4                    001451 RLA    
-incsp5                    001456 RLA    incsp6                    00145B RLA    
-incsp7                    001460 RLA    initlib                   001CF9 RLA    
-ldax0sp                   00156D  LA    ldaxysp                   00156F RLA    
-ldeax0sp                  001576 RLA    ldeaxysp                  001578  LA    
-mulax10                   001712 RLA    negeax                    0015EB RLA    
-newline                   001387  LA    plot                      0013AC RLA    
-popa                      00172B RLA    popax                     001436 RLA    
-popptr1                   001737 RLA    ptr1                      00000A RLZ    
-ptr2                      00000C RLZ    ptr3                      00000E RLZ    
-ptr4                      000010 RLZ    push0                     001760 RLA    
-push0ax                   00160C RLA    push1                     001745 RLA    
-pusha                     00174E RLA    pusha0                    001762 RLA    
-pusha0sp                  00174A  LA    pushax                    001764 RLA    
-pushaysp                  00174C  LA    pusheax                   001612 RLA    
-pushl0                    001609  LA    pushw0sp                  00177A  LA    
-pushwysp                  00177C RLA    putchar                   0013B4  LA    
-regbank                   000016 RLZ    regsave                   000006  LZ    
-sp                        000002 RLZ    sreg                      000004 RLZ    
-stax0sp                   001796 RLA    staxysp                   001798 RLA    
-subeq0sp                  00182E  LA    subeqysp                  001830 RLA    
-subysp                    001843 RLA    tmp1                      000012 RLZ    
+__ZP_START__              000002  LA    ___oserror                001DB4 RLA    
+__argc                    001D58  LA    __argv                    001D5A  LA    
+__ctype                   001CB8 RLA    __ctypeidx                001CC3 RLA    
+__hextab                  001C9C RLA    __longminstr              001CAC RLA    
+__printf                  000F3C RLA    _bgcolor                  001388 RLA    
+_blank_on_load            001D50  LA    _blank_screen             000A25  LA    
+_bordercolor              001216 RLA    _cbm_close                00121E REA    
+_cbm_k_close              00121E RLA    _cbm_k_load               001222 RLA    
+_cbm_k_open               00123F RLA    _cbm_k_setlfs             001248 RLA    
+_cbm_k_setnam             001256 RLA    _cbm_load                 001280 RLA    
+_cbm_open                 0012C4 RLA    _cbm_read                 0012D4 RLA    
+_cgetc                    00132F RLA    _clock                    001376 RLA    
+_clrscr                   00E544 REA    _cprintf                  00139C RLA    
+_cputc                    0013CB RLA    _cputcxy                  0013C6  LA    
+_cursor                   001451 RLA    _dev                      001D4A  LA    
+_display_loop             000D49  LA    _error                    0008AF  LA    
+_exit                     000825  LA    _gotoxy                   0014A8 RLA    
+_image_count              001D4B  LA    _index                    001D4D  LA    
+_index_direction          001D4F  LA    _init_count               000B60  LA    
+_input_int                000A50  LA    _itoa                     001506 RLA    
+_kbhit                    00157C RLA    _koala_screen             000A30  LA    
+_loadtoram                000840  LA    _ltoa                     0016EC RLA    
+_main                     000E1F RLA    _mode                     001D52  LA    
+_numbuf                   001DA7  LA    _path                     001DA5  LA    
+_pause_on_shift           000B14  LA    _quit                     001D51  LA    
+_result                   001DB1  LA    _show_menu                000BB4  LA    
+_sleep_or_key             000AC2  LA    _strcat                   001824 RLA    
+_strcpy                   001855 RLA    _strlen                   001874 RLA    
+_strlower                 00188A RLA    _strlwr                   00188A  LA    
+_text_screen              000A40  LA    _textcolor                001380 RLA    
+_timeout                  001D53  LA    _ultoa                    00172D RLA    
+_update_index             000B1A  LA    _utoa                     001548  LA    
+_vcprintf                 00190E RLA    addysp                    0011EE RLA    
+addysp1                   0011ED RLA    axlong                    0011FB RLA    
+axulong                   001201 RLA    bnega                     00120C RLA    
+bnegax                    001208  LA    booleq                    00176F RLA    
+boolge                    001780 RLA    boolgt                    00177E  LA    
+boolle                    001776  LA    boollt                    001778  LA    
+boolne                    001769  LA    booluge                   001790  LA    
+boolugt                   00178E  LA    boolule                   001786  LA    
+boolult                   001788  LA    callmain                  001269 RLA    
+condes                    001D5C  LA    cputdirect                0013EA  LA    
+ctypemask                 001433  LA    ctypemaskdirect           001437 RLA    
+cursor                    001DB3 RLA    decsp1                    00145B RLA    
+decsp2                    001464 RLA    decsp3                    001471 RLA    
+decsp4                    00147E RLA    decsp5                    00148B RLA    
+decsp6                    001498 RLA    donelib                   001390 RLA    
+gotoxy                    0014A5 RLA    incsp1                    0014B2 RLA    
+incsp2                    0014C1 RLA    incsp3                    0014CF RLA    
+incsp4                    0014D4 RLA    incsp5                    0014D9 RLA    
+incsp6                    0014DE RLA    incsp7                    0014E3 RLA    
+initlib                   001DA5 RLA    ldax0sp                   0015F0  LA    
+ldaxysp                   0015F2 RLA    ldeax0sp                  0015F9 RLA    
+ldeaxysp                  0015FB  LA    mulax10                   001795 RLA    
+negeax                    00166E RLA    newline                   0013FA  LA    
+plot                      00141F RLA    popa                      0017AE RLA    
+popax                     0014B9 RLA    popptr1                   0017BA RLA    
+ptr1                      00000A RLZ    ptr2                      00000C RLZ    
+ptr3                      00000E RLZ    ptr4                      000010 RLZ    
+push0                     0017E3 RLA    push0ax                   00168F RLA    
+push1                     0017C8 RLA    pusha                     0017D1 RLA    
+pusha0                    0017E5 RLA    pusha0sp                  0017CD  LA    
+pushax                    0017E7 RLA    pushaysp                  0017CF  LA    
+pusheax                   001695 RLA    pushl0                    00168C  LA    
+pushw0sp                  0017FD  LA    pushwysp                  0017FF RLA    
+putchar                   001427  LA    regbank                   000016 RLZ    
+regsave                   000006  LZ    sp                        000002 RLZ    
+sreg                      000004 RLZ    stax0sp                   001819 RLA    
+staxysp                   00181B RLA    subeq0sp                  0018B1  LA    
+subeqysp                  0018B3 RLA    tmp1                      000012 RLZ    
 tmp2                      000013 RLZ    tmp3                      000014 RLZ    
-tmp4                      000015 RLZ    tosadd0ax                 00150D  LA    
-tosaddeax                 001513 RLA    tosgeeax                  001589 RLA    
-toslcmp                   001532 RLA    tosmul0ax                 00158F  LA    
-tosmuleax                 001595  LA    tossub0ax                 00162A  LA    
-tossubeax                 001630 RLA    tosumul0ax                00158F RLA    
-tosumuleax                001595  LA    zerobss                   0018C8 RLA    
+tmp4                      000015 RLZ    tosadd0ax                 001590  LA    
+tosaddeax                 001596 RLA    tosgeeax                  00160C RLA    
+toslcmp                   0015B5 RLA    tosmul0ax                 001612  LA    
+tosmuleax                 001618  LA    tossub0ax                 0016AD  LA    
+tossubeax                 0016B3 RLA    tosumul0ax                001612 RLA    
+tosumuleax                001618  LA    zerobss                   00193E RLA    
 
 
 
 Exports list by value:
 ----------------------
+__KOALA_FILEOFFS__        000000  EA    __ZP_FILEOFFS__           000000  EA    
 __DESTRUCTOR_COUNT__      000000 REA    __CONSTRUCTOR_COUNT__     000000 REA    
-__ZP_FILEOFFS__           000000  EA    __KOALA_FILEOFFS__        000000  EA    
-__EXEHDR__                000001 REA    __STARTUP__               000001 REA    
-__LOADADDR__              000001 REA    sp                        000002 RLZ    
+__STARTUP__               000001 REA    __LOADADDR__              000001 REA    
+__EXEHDR__                000001 REA    sp                        000002 RLZ    
 __HEADER_FILEOFFS__       000002  EA    __ZP_START__              000002  LA    
 sreg                      000004 RLZ    regsave                   000006  LZ    
 ptr1                      00000A RLZ    ptr2                      00000C RLZ    
-__HEADER_SIZE__           00000D  EA    __MAIN_FILEOFFS__         00000E  EA    
-ptr3                      00000E RLZ    ptr4                      000010 RLZ    
+__HEADER_SIZE__           00000D  EA    ptr3                      00000E RLZ    
+__MAIN_FILEOFFS__         00000E  EA    ptr4                      000010 RLZ    
 tmp1                      000012 RLZ    tmp2                      000013 RLZ    
 tmp3                      000014 RLZ    tmp4                      000015 RLZ    
 regbank                   000016 RLZ    __ZP_SIZE__               00001A  EA    
 __ZP_LAST__               00001C  LA    __ONCE_SIZE__             000026  EA    
-__BSS_SIZE__              00002E REA    ST                        000090 RLZ    
+__BSS_SIZE__              00003C REA    ST                        000090 RLZ    
 CURS_X                    0000D3 RLZ    CURS_Y                    0000D6 RLZ    
 __STACKSIZE__             000800 REA    __HEADER_START__          000801  LA    
 __HEADER_LAST__           00080D RLA    __MAIN_START__            00080D RLA    
 _exit                     000825  LA    _loadtoram                000840  LA    
 _error                    0008AF  LA    _LoadKoalaPictureAndDisplay 0008CE  LA    
-_koala_screen             000A25  LA    _text_screen              000A35  LA    
-_input_int                000A4F  LA    _sleep_or_key             000AC1  LA    
-_pause_on_shift           000B13  LA    _update_index             000B19  LA    
-_main                     000B60 RLA    __printf                  000ED7 RLA    
-addysp1                   001188 RLA    addysp                    001189 RLA    
-axlong                    001196 RLA    axulong                   00119C RLA    
-_bordercolor              0011A3 RLA    _cbm_close                0011AB REA    
-_cbm_k_close              0011AB RLA    _cbm_k_load               0011AF RLA    
-_cbm_k_open               0011CC RLA    _cbm_k_setlfs             0011D5 RLA    
-_cbm_k_setnam             0011E3 RLA    callmain                  0011F6 RLA    
-_cbm_load                 00120D RLA    _cbm_open                 001251 RLA    
-_cbm_read                 001261 RLA    _cgetc                    0012BC RLA    
-_clock                    001303 RLA    _textcolor                00130D RLA    
-_bgcolor                  001315 RLA    donelib                   00131D RLA    
-_cprintf                  001329 RLA    _cputcxy                  001353  LA    
-_cputc                    001358 RLA    cputdirect                001377  LA    
-newline                   001387  LA    plot                      0013AC RLA    
-putchar                   0013B4  LA    ctypemask                 0013C0  LA    
-ctypemaskdirect           0013C4 RLA    _cursor                   0013DE RLA    
-decsp2                    0013E8 RLA    decsp3                    0013F5 RLA    
-decsp4                    001402 RLA    decsp5                    00140F RLA    
-decsp6                    00141C RLA    gotoxy                    001429 RLA    
-_gotoxy                   00142C  LA    popax                     001436 RLA    
-incsp2                    00143E RLA    incsp3                    00144C RLA    
-incsp4                    001451 RLA    incsp5                    001456 RLA    
-incsp6                    00145B RLA    incsp7                    001460 RLA    
-_itoa                     001483 RLA    _utoa                     0014C5  LA    
-_kbhit                    0014F9 RLA    PLOT                      001502 RLA    
-tosadd0ax                 00150D  LA    tosaddeax                 001513 RLA    
-toslcmp                   001532 RLA    ldax0sp                   00156D  LA    
-ldaxysp                   00156F RLA    ldeax0sp                  001576 RLA    
-ldeaxysp                  001578  LA    tosgeeax                  001589 RLA    
-tosumul0ax                00158F RLA    tosmul0ax                 00158F  LA    
-tosmuleax                 001595  LA    tosumuleax                001595  LA    
-negeax                    0015EB RLA    pushl0                    001609  LA    
-push0ax                   00160C RLA    pusheax                   001612 RLA    
-tossub0ax                 00162A  LA    tossubeax                 001630 RLA    
-_ltoa                     001669 RLA    _ultoa                    0016AA RLA    
-boolne                    0016E6  LA    booleq                    0016EC RLA    
-boolle                    0016F3  LA    boollt                    0016F5  LA    
-boolgt                    0016FB  LA    boolge                    0016FD RLA    
-boolule                   001703  LA    boolult                   001705  LA    
-boolugt                   00170B  LA    booluge                   00170D  LA    
-mulax10                   001712 RLA    popa                      00172B RLA    
-popptr1                   001737 RLA    push1                     001745 RLA    
-pusha0sp                  00174A  LA    pushaysp                  00174C  LA    
-pusha                     00174E RLA    push0                     001760 RLA    
-pusha0                    001762 RLA    pushax                    001764 RLA    
-pushw0sp                  00177A  LA    pushwysp                  00177C RLA    
-stax0sp                   001796 RLA    staxysp                   001798 RLA    
-_strcat                   0017A1 RLA    _strcpy                   0017D2 RLA    
-_strlen                   0017F1 RLA    __MAIN_SIZE__             0017F3 REA    
-_strlower                 001807 RLA    _strlwr                   001807  LA    
-subeq0sp                  00182E  LA    subeqysp                  001830 RLA    
-subysp                    001843 RLA    _vcprintf                 001898 RLA    
-zerobss                   0018C8 RLA    __hextab                  001BF4 RLA    
-__longminstr              001C04 RLA    __ctype                   001C10 RLA    
-__ctypeidx                001C1B RLA    __DESTRUCTOR_TABLE__      001CA2 RLA    
-_dev                      001CA2  LA    _count                    001CA3  LA    
-_index                    001CA5  LA    _index_direction          001CA7  LA    
-__argc                    001CAC  LA    __argv                    001CAE  LA    
-condes                    001CB0  LA    __BSS_LOAD__              001CF9  LA    
-cursor                    001CF9 RLA    __ONCE_RUN__              001CF9 RLA    
-__ONCE_LOAD__             001CF9  LA    __BSS_RUN__               001CF9 RLA    
-initlib                   001CF9 RLA    ___oserror                001CFA RLA    
-__MAIN_LAST__             001D1F  LA    __CONSTRUCTOR_TABLE__     001D1F RLA    
-__KOALA_SIZE__            001F40  EA    __KOALA_LAST__            002000  LA    
-__KOALA_START__           002000  LA    __KOALA__                 002000 REA    
-__HIMEM__                 00D000 REA    CLRSCR                    00E544  LA    
-_clrscr                   00E544 REA    KBDREAD                   00E5B4  LA    
+_blank_screen             000A25  LA    _koala_screen             000A30  LA    
+_text_screen              000A40  LA    _input_int                000A50  LA    
+_sleep_or_key             000AC2  LA    _pause_on_shift           000B14  LA    
+_update_index             000B1A  LA    _init_count               000B60  LA    
+_show_menu                000BB4  LA    _display_loop             000D49  LA    
+_main                     000E1F RLA    __printf                  000F3C RLA    
+addysp1                   0011ED RLA    addysp                    0011EE RLA    
+axlong                    0011FB RLA    axulong                   001201 RLA    
+bnegax                    001208  LA    bnega                     00120C RLA    
+_bordercolor              001216 RLA    _cbm_close                00121E REA    
+_cbm_k_close              00121E RLA    _cbm_k_load               001222 RLA    
+_cbm_k_open               00123F RLA    _cbm_k_setlfs             001248 RLA    
+_cbm_k_setnam             001256 RLA    callmain                  001269 RLA    
+_cbm_load                 001280 RLA    _cbm_open                 0012C4 RLA    
+_cbm_read                 0012D4 RLA    _cgetc                    00132F RLA    
+_clock                    001376 RLA    _textcolor                001380 RLA    
+_bgcolor                  001388 RLA    donelib                   001390 RLA    
+_cprintf                  00139C RLA    _cputcxy                  0013C6  LA    
+_cputc                    0013CB RLA    cputdirect                0013EA  LA    
+newline                   0013FA  LA    plot                      00141F RLA    
+putchar                   001427  LA    ctypemask                 001433  LA    
+ctypemaskdirect           001437 RLA    _cursor                   001451 RLA    
+decsp1                    00145B RLA    decsp2                    001464 RLA    
+decsp3                    001471 RLA    decsp4                    00147E RLA    
+decsp5                    00148B RLA    decsp6                    001498 RLA    
+gotoxy                    0014A5 RLA    _gotoxy                   0014A8 RLA    
+incsp1                    0014B2 RLA    popax                     0014B9 RLA    
+incsp2                    0014C1 RLA    incsp3                    0014CF RLA    
+incsp4                    0014D4 RLA    incsp5                    0014D9 RLA    
+incsp6                    0014DE RLA    incsp7                    0014E3 RLA    
+_itoa                     001506 RLA    _utoa                     001548  LA    
+_kbhit                    00157C RLA    PLOT                      001585 RLA    
+tosadd0ax                 001590  LA    tosaddeax                 001596 RLA    
+toslcmp                   0015B5 RLA    ldax0sp                   0015F0  LA    
+ldaxysp                   0015F2 RLA    ldeax0sp                  0015F9 RLA    
+ldeaxysp                  0015FB  LA    tosgeeax                  00160C RLA    
+tosmul0ax                 001612  LA    tosumul0ax                001612 RLA    
+tosmuleax                 001618  LA    tosumuleax                001618  LA    
+negeax                    00166E RLA    pushl0                    00168C  LA    
+push0ax                   00168F RLA    pusheax                   001695 RLA    
+tossub0ax                 0016AD  LA    tossubeax                 0016B3 RLA    
+_ltoa                     0016EC RLA    _ultoa                    00172D RLA    
+boolne                    001769  LA    booleq                    00176F RLA    
+boolle                    001776  LA    boollt                    001778  LA    
+boolgt                    00177E  LA    boolge                    001780 RLA    
+boolule                   001786  LA    boolult                   001788  LA    
+boolugt                   00178E  LA    booluge                   001790  LA    
+mulax10                   001795 RLA    popa                      0017AE RLA    
+popptr1                   0017BA RLA    push1                     0017C8 RLA    
+pusha0sp                  0017CD  LA    pushaysp                  0017CF  LA    
+pusha                     0017D1 RLA    push0                     0017E3 RLA    
+pusha0                    0017E5 RLA    pushax                    0017E7 RLA    
+__MAIN_SIZE__             0017F3 REA    pushw0sp                  0017FD  LA    
+pushwysp                  0017FF RLA    stax0sp                   001819 RLA    
+staxysp                   00181B RLA    _strcat                   001824 RLA    
+_strcpy                   001855 RLA    _strlen                   001874 RLA    
+_strlower                 00188A RLA    _strlwr                   00188A  LA    
+subeq0sp                  0018B1  LA    subeqysp                  0018B3 RLA    
+_vcprintf                 00190E RLA    zerobss                   00193E RLA    
+__hextab                  001C9C RLA    __longminstr              001CAC RLA    
+__ctype                   001CB8 RLA    __ctypeidx                001CC3 RLA    
+__DESTRUCTOR_TABLE__      001D4A RLA    _dev                      001D4A  LA    
+_image_count              001D4B  LA    _index                    001D4D  LA    
+_index_direction          001D4F  LA    _blank_on_load            001D50  LA    
+_quit                     001D51  LA    _mode                     001D52  LA    
+_timeout                  001D53  LA    __argc                    001D58  LA    
+__argv                    001D5A  LA    condes                    001D5C  LA    
+_path                     001DA5  LA    initlib                   001DA5 RLA    
+__BSS_LOAD__              001DA5  LA    __BSS_RUN__               001DA5 RLA    
+__ONCE_LOAD__             001DA5  LA    __ONCE_RUN__              001DA5 RLA    
+_numbuf                   001DA7  LA    _result                   001DB1  LA    
+cursor                    001DB3 RLA    ___oserror                001DB4 RLA    
+__CONSTRUCTOR_TABLE__     001DCB RLA    __MAIN_LAST__             001DCB  LA    
+__KOALA_SIZE__            001F40  EA    __KOALA__                 002000 REA    
+__KOALA_START__           002000  LA    __KOALA_LAST__            002000  LA    
+__HIMEM__                 00D000 REA    _clrscr                   00E544 REA    
+CLRSCR                    00E544  LA    KBDREAD                   00E5B4  LA    
 UPDCRAMPTR                00EA24  LA    NMIEXIT                   00FEBC  LA    
 CINT                      00FF81  LA    IOINIT                    00FF84  LA    
 RAMTAS                    00FF87  LA    RESTOR                    00FF8A  LA    
@@ -792,7 +820,7 @@ SETNAM                    00FFBD RLA    OPEN                      00FFC0 RLA
 CLOSE                     00FFC3 RLA    CHKIN                     00FFC6 RLA    
 CKOUT                     00FFC9  LA    CLRCH                     00FFCC RLA    
 BASIN                     00FFCF RLA    CHRIN                     00FFCF  LA    
-CHROUT                    00FFD2  LA    BSOUT                     00FFD2 RLA    
+BSOUT                     00FFD2 RLA    CHROUT                    00FFD2  LA    
 LOAD                      00FFD5 RLA    SAVE                      00FFD8  LA    
 SETTIM                    00FFDB  LA    RDTIM                     00FFDE RLA    
 STOP                      00FFE1  LA    GETIN                     00FFE4  LA    
@@ -936,9 +964,11 @@ __longminstr (_longminstr.o):
 __printf (_printf.o):
     vcprintf.o                conio/vcprintf.s:9
 _bgcolor (color.o):
-    KoalaClient.o             KoalaClient.s:24
-_bordercolor (bordercolor.o):
     KoalaClient.o             KoalaClient.s:25
+_blank_on_load (KoalaClient.o):
+_blank_screen (KoalaClient.o):
+_bordercolor (bordercolor.o):
+    KoalaClient.o             KoalaClient.s:26
 _cbm_close (cbm_close.o):
     KoalaClient.o             KoalaClient.s:16
 _cbm_k_close (c_close.o):
@@ -960,28 +990,31 @@ _cbm_open (cbm_open.o):
 _cbm_read (cbm_read.o):
     KoalaClient.o             KoalaClient.s:17
 _cgetc (cgetc.o):
-    KoalaClient.o             KoalaClient.s:21
+    KoalaClient.o             KoalaClient.s:22
 _clock (clock.o):
-    KoalaClient.o             KoalaClient.s:29
+    KoalaClient.o             KoalaClient.s:30
 _clrscr (clrscr.o):
     KoalaClient.o             KoalaClient.s:18
-_count (KoalaClient.o):
 _cprintf (cprintf.o):
-    KoalaClient.o             KoalaClient.s:20
+    KoalaClient.o             KoalaClient.s:21
 _cputc (cputc.o):
     vcprintf.o                conio/vcprintf.s:9
 _cputcxy (cputc.o):
 _cursor (cursor.o):
-    KoalaClient.o             KoalaClient.s:22
+    KoalaClient.o             KoalaClient.s:23
 _dev (KoalaClient.o):
+_display_loop (KoalaClient.o):
 _error (KoalaClient.o):
 _exit (crt0.o):
 _gotoxy (gotoxy.o):
+    KoalaClient.o             KoalaClient.s:20
+_image_count (KoalaClient.o):
 _index (KoalaClient.o):
 _index_direction (KoalaClient.o):
+_init_count (KoalaClient.o):
 _input_int (KoalaClient.o):
 _itoa (itoa.o):
-    KoalaClient.o             KoalaClient.s:26
+    KoalaClient.o             KoalaClient.s:27
 _kbhit (kbhit.o):
     KoalaClient.o             KoalaClient.s:19
 _koala_screen (KoalaClient.o):
@@ -990,12 +1023,18 @@ _ltoa (ltoa.o):
     _printf.o                 common/_printf.s:12
 _main (KoalaClient.o):
     callmain.o                runtime/callmain.s:11
+_mode (KoalaClient.o):
+_numbuf (KoalaClient.o):
+_path (KoalaClient.o):
 _pause_on_shift (KoalaClient.o):
+_quit (KoalaClient.o):
+_result (KoalaClient.o):
+_show_menu (KoalaClient.o):
 _sleep_or_key (KoalaClient.o):
 _strcat (strcat.o):
-    KoalaClient.o             KoalaClient.s:27
-_strcpy (strcpy.o):
     KoalaClient.o             KoalaClient.s:28
+_strcpy (strcpy.o):
+    KoalaClient.o             KoalaClient.s:29
 _strlen (strlen.o):
     _printf.o                 common/_printf.s:13
 _strlower (strlower.o):
@@ -1003,7 +1042,8 @@ _strlower (strlower.o):
 _strlwr (strlower.o):
 _text_screen (KoalaClient.o):
 _textcolor (color.o):
-    KoalaClient.o             KoalaClient.s:23
+    KoalaClient.o             KoalaClient.s:24
+_timeout (KoalaClient.o):
 _ultoa (ltoa.o):
     _printf.o                 common/_printf.s:12
 _update_index (KoalaClient.o):
@@ -1017,7 +1057,6 @@ addysp (addysp.o):
     incsp4.o                  runtime/incsp4.s:8
     incsp3.o                  runtime/incsp3.s:8
     cprintf.o                 conio/cprintf.s:8
-    KoalaClient.o             KoalaClient.s:930
 addysp1 (addysp.o):
     lsub.o                    runtime/lsub.s:11
     lmul.o                    runtime/lmul.s:9
@@ -1027,6 +1066,9 @@ axlong (axlong.o):
     _printf.o                 common/_printf.s:11
 axulong (axlong.o):
     _printf.o                 common/_printf.s:11
+bnega (bneg.o):
+    KoalaClient.o             KoalaClient.s:1042
+bnegax (bneg.o):
 booleq (makebool.o):
     cbm_load.o                ../libwrk/c64/cbm_load.s:83
 boolge (makebool.o):
@@ -1049,56 +1091,60 @@ ctypemaskdirect (ctypemask.o):
 cursor (_cursor.o):
     cursor.o                  conio/cursor.s:8
     cgetc.o                   c64/cgetc.s:8
+decsp1 (decsp1.o):
+    KoalaClient.o             KoalaClient.s:1042
 decsp2 (decsp2.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 decsp3 (decsp3.o):
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
+    KoalaClient.o             KoalaClient.s:1042
+    KoalaClient.o             KoalaClient.s:1042
 decsp4 (decsp4.o):
     lpush.o                   runtime/lpush.s:12
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 decsp5 (decsp5.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 decsp6 (decsp6.o):
     _printf.o                 common/_printf.s:11
 donelib (condes.o):
     crt0.o                    c64/crt0.s:8
 gotoxy (gotoxy.o):
     cputc.o                   c64/cputc.s:10
+incsp1 (incsp1.o):
+    KoalaClient.o             KoalaClient.s:1042
 incsp2 (incsp2.o):
     popptr1.o                 runtime/popptr1.s:8
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 incsp3 (incsp3.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 incsp4 (incsp4.o):
     lcmp.o                    runtime/lcmp.s:9
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 incsp5 (incsp5.o):
     cbm_load.o                ../libwrk/c64/cbm_load.s:83
 incsp6 (incsp6.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 incsp7 (incsp7.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 initlib (condes.o):
     crt0.o                    c64/crt0.s:8
 ldax0sp (ldaxsp.o):
 ldaxysp (ldaxsp.o):
     cbm_load.o                ../libwrk/c64/cbm_load.s:83
 ldeax0sp (ldeaxysp.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 ldeaxysp (ldeaxysp.o):
 mulax10 (mulax10.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 negeax (lneg.o):
     ltoa.o                    common/ltoa.s:9
 newline (cputc.o):
 plot (cputc.o):
     gotoxy.o                  cbm/gotoxy.s:8
 popa (popa.o):
-    gotoxy.o                  cbm/gotoxy.s:8
     c_setlfs.o                cbm/c_setlfs.s:12
     c_load.o                  cbm/c_load.s:11
+    gotoxy.o                  cbm/gotoxy.s:8
     cbm_read.o                cbm/cbm_read.s:43
     cbm_open.o                cbm/cbm_open.s:24
 popax (incsp2.o):
@@ -1147,20 +1193,18 @@ ptr3 (zeropage.o):
 ptr4 (zeropage.o):
     lmul.o                    runtime/lmul.s:10
 push0 (pushax.o):
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 push0ax (lpush.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 push1 (push1.o):
     _printf.o                 common/_printf.s:11
 pusha (pusha.o):
     cbm_load.o                ../libwrk/c64/cbm_load.s:83
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
+    KoalaClient.o             KoalaClient.s:1042
 pusha0 (pushax.o):
     push1.o                   runtime/push1.s:8
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 pusha0sp (pusha.o):
 pushax (pushax.o):
     callmain.o                runtime/callmain.s:11
@@ -1168,21 +1212,23 @@ pushax (pushax.o):
     vcprintf.o                conio/vcprintf.s:8
     cprintf.o                 conio/cprintf.s:8
     cbm_load.o                ../libwrk/c64/cbm_load.s:83
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
+    KoalaClient.o             KoalaClient.s:1042
+    KoalaClient.o             KoalaClient.s:1042
+    KoalaClient.o             KoalaClient.s:1042
+    KoalaClient.o             KoalaClient.s:1042
+    KoalaClient.o             KoalaClient.s:1042
+    KoalaClient.o             KoalaClient.s:1042
+    KoalaClient.o             KoalaClient.s:1042
+    KoalaClient.o             KoalaClient.s:1042
 pushaysp (pusha.o):
 pusheax (lpush.o):
     _printf.o                 common/_printf.s:11
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 pushl0 (lpush.o):
 pushw0sp (pushwsp.o):
 pushwysp (pushwsp.o):
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 putchar (cputc.o):
 regbank (zeropage.o):
     _printf.o                 /home/runner/work/cc65/cc65/asminc/zeropage.inc:14
@@ -1191,9 +1237,9 @@ sp (zeropage.o):
     popptr1.o                 runtime/popptr1.s:9
     lcmp.o                    runtime/lcmp.s:10
     decsp6.o                  runtime/decsp6.s:8
+    addysp.o                  runtime/addysp.s:8
     _printf.o                 /home/runner/work/cc65/cc65/asminc/zeropage.inc:11
     vcprintf.o                conio/vcprintf.s:10
-    subysp.o                  runtime/subysp.s:9
     subeqsp.o                 runtime/subeqsp.s:8
     staxsp.o                  runtime/staxsp.s:8
     pushwsp.o                 runtime/pushwsp.s:8
@@ -1208,14 +1254,15 @@ sp (zeropage.o):
     ladd.o                    runtime/ladd.s:9
     itoa.o                    common/itoa.s:11
     incsp2.o                  runtime/incsp2.s:8
+    incsp1.o                  runtime/incsp1.s:8
     decsp5.o                  runtime/decsp5.s:8
     decsp4.o                  runtime/decsp4.s:8
     decsp3.o                  runtime/decsp3.s:8
     decsp2.o                  runtime/decsp2.s:8
+    decsp1.o                  runtime/decsp1.s:8
     crt0.o                    /home/runner/work/cc65/cc65/asminc/zeropage.inc:11
     cprintf.o                 conio/cprintf.s:9
     cbm_load.o                ../libwrk/c64/cbm_load.s:10
-    addysp.o                  runtime/addysp.s:8
     KoalaClient.o             KoalaClient.s:10
 sreg (zeropage.o):
     lneg.o                    runtime/lneg.s:11
@@ -1232,15 +1279,12 @@ sreg (zeropage.o):
     clock.o                   cbm/clock.s:9
     KoalaClient.o             KoalaClient.s:10
 stax0sp (staxsp.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 staxysp (staxsp.o):
-    KoalaClient.o             KoalaClient.s:930
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 subeq0sp (subeqsp.o):
 subeqysp (subeqsp.o):
-    KoalaClient.o             KoalaClient.s:930
-subysp (subysp.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 tmp1 (zeropage.o):
     ltoa.o                    common/ltoa.s:11
     c_setlfs.o                cbm/c_setlfs.s:13
@@ -1258,18 +1302,18 @@ tmp4 (zeropage.o):
     lmul.o                    runtime/lmul.s:10
 tosadd0ax (ladd.o):
 tosaddeax (ladd.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 tosgeeax (lge.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 toslcmp (lcmp.o):
     lge.o                     runtime/lge.s:8
 tosmul0ax (lmul.o):
 tosmuleax (lmul.o):
 tossub0ax (lsub.o):
 tossubeax (lsub.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 tosumul0ax (lmul.o):
-    KoalaClient.o             KoalaClient.s:930
+    KoalaClient.o             KoalaClient.s:1042
 tosumuleax (lmul.o):
 zerobss (zerobss.o):
     crt0.o                    c64/crt0.s:9

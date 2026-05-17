@@ -27,9 +27,16 @@ enum Mode
 
 /* Global Variables */
 unsigned char dev = 8;
-int count = 0;  // Signed for comparisons
+int image_count = 0;  // Signed for comparisons
 int index = 0;
-int index_direction = 1;
+char index_direction = 1;
+char blank_on_load = 1;
+char quit = 0;
+enum Mode mode = RANDOM;
+char* path;
+char numbuf[10];
+int result;
+int timeout = 5;
 
 unsigned char loadtoram(unsigned char lfn, unsigned char* dest, unsigned int length) {
     int l;
@@ -113,6 +120,12 @@ int LoadKoalaPictureAndDisplay(char* koala_filename)
     return(0);
 }
 
+void blank_screen()
+{
+    POKE(0xd020, COLOR_BLACK);
+    POKE(0xd011, 0x2b); /* disable screen */ 
+}
+
 void koala_screen()
 {
     POKE(0xd011, 0x3b); /* enable bitmap mode */
@@ -125,8 +138,6 @@ void text_screen()
     POKE(0xd011, 0x1b);
     POKE(0xd016, 0x08);
     POKE(0xd018, 0x17);
-    POKE(0xd020, 0x0e);
-    POKE(0xd021, 0x06);
 }
 
 unsigned int input_int()   // Do it the hard way since we don't have memory for cscanf etc.
@@ -174,34 +185,49 @@ void update_index()
 {
     index += index_direction;
 
-    if (index >= count)
+    if (index >= image_count)
     {
         index = 0;  // Wrap
     }
     if (index < 0)
     {
-        index = count - 1;  // Wrap
+        index = image_count - 1;  // Wrap
     }
 }
 
-void main() 
+void init_count()
 {
-    int result = 0;
-    int timeout = 5;
-    char loop = 1;
-    char blank_on_load = 0;
-    char *path;
-    char numbuf[20];
-    char c = ' ';
-    enum Mode mode = RANDOM;
+    // Init Loop
+    while (1)
+    {
+        /* Get # of images available */
+        result = cbm_load(BASE_URL"count.prg", dev, NULL);
 
-    dev = PEEK(0x00BA);   // Always use current drive#, as it's guaranteed to be enabled.
+        if (result == 0)
+        {    
+            clrscr();
+            textcolor(COLOR_RED);
+            cprintf("\n\r\n\rERROR: No response from server.");
+            sleep_or_key(10);
+            continue;
+        }
+
+        image_count = PEEKW(COUNT_ADDR);  // TODO, use long once more than 65536 images :-)
+        break;
+    }
+}
+
+void show_menu()
+{
+    char c;
+
+    /* Initialize Screen */
+    clrscr();
+    text_screen();
 
     while (1)
     {
-        /* Initialize Screen */
-        text_screen();
-        clrscr();
+        gotoxy(0, 0);
         bgcolor(COLOR_BLACK);
         bordercolor(COLOR_BLUE);
         textcolor(COLOR_LIGHTGREEN);
@@ -211,123 +237,159 @@ void main()
 #ifdef LOCAL
         textcolor(COLOR_RED);
         cprintf(" LOCAL");
-#endif   
+#endif 
 
-        /* Get # of images available */
-        result = cbm_load(BASE_URL"count.prg", dev, NULL);
-
-        if (result == 0)
-        {
-            textcolor(COLOR_RED);
-            cprintf("\n\r\n\rERROR: No response from server.");
-            sleep_or_key(10);
-            continue;
-        }
-
-        count = PEEKW(COUNT_ADDR);  // TODO, use long once more than 65536 images :-)
-         
         textcolor(COLOR_WHITE);
-        cprintf("\n\r\n\r     %d ", count);
+        cprintf("\n\r\n\r     %d ", image_count);
         textcolor(COLOR_LIGHTRED);
-        
+
         cprintf("Koala images on server.\n\r\n\r");
         textcolor(COLOR_GRAY3);
-        cprintf("Keys during display:\n\r\n\r SPACE to advance to next picture\n\r +/-   to move forward/backward*\n\r SHIFT to pause\n\r F1    to return to this screen\n\r STOP  to exit\n\r\n\r");
-        textcolor(COLOR_GREEN);
-        cprintf("Select mode to start:\r\n\r\n R=Random  S=Synchronized  I=Indexed*\n\r\n\r");
+        cprintf("Keys during display:\n\r\n\r SPACE to advance to next picture\n\r +/-   to move forward/backward");
+        textcolor(COLOR_YELLOW);
+        cprintf("*");
+        textcolor(COLOR_GRAY3);
+        cprintf("\n\r SHIFT to pause\n\r F1    to return to this screen\n\r STOP  to exit\n\r\n\r\n\r");
+        textcolor(COLOR_LIGHTBLUE);
+        cprintf("Options:\r\n\r\n B=Blank during load: ");
+
+        if (blank_on_load)
+        {
+            cprintf("Yes");
+        }
+        else
+        {
+            cprintf("No ");
+        }
+
+        textcolor(COLOR_LIGHTGREEN);
+        cprintf("\n\r\n\r\n\rSelect mode to start:\r\n\r\n R=Random  S=Synchronized  I=Indexed");
+        textcolor(COLOR_YELLOW);
+        cprintf("*\n\r\n\r");
         c = cgetc();
 
         switch (c)
         {
             case CH_F1:
+                continue;
+
             case CH_F5:
+                init_count();
                 continue;
 
             case 3:  // RUN-STOP
-                goto cleanup;
+                quit = 1;
+                return;
+
+            case 'b':
+                blank_on_load = !blank_on_load;
+                continue;
 
             case 's':
                 mode = SYNCED;
                 path = BASE_URL"synced.koa";
-                break;
+                return;
 
-            case 'i': 
+            case 'i':
                 mode = INDEX;
                 path = BASE_URL"index.koa?index=000000000";
 
                 cprintf("Starting index? ");
                 index = input_int();
-                if (index >= count) index = count-1;
-                break;
+                if (index >= image_count) index = image_count - 1;
+                return;
 
             case ' ':
             case 'r':
             default:
                 mode = RANDOM;
-                path=BASE_URL"random.koa";
+                path = BASE_URL"random.koa";
+                return;
+        }
+    }
+}
+
+void display_loop()
+{
+    index_direction = 1;    
+
+    while (1)
+    {
+        if (mode == INDEX)
+        {
+            itoa(index, numbuf, 10);
+            strcpy(path, BASE_URL"index.koa?index=");
+            strcat(path, numbuf);
+        }
+
+        
+        if (blank_on_load)
+        {
+            blank_screen();
+        }
+        result = LoadKoalaPictureAndDisplay(path);
+        koala_screen();
+
+        if (result != 0)   // Show error message briefly
+        {
+            text_screen();
+            bordercolor(2);
+        }
+
+        result = sleep_or_key(timeout);
+
+        switch (result)
+        {
+            case 0:    // Timeout                    
+            case ' ':
+                if (mode == INDEX)
+                {
+                    update_index();
+                }
+                break;
+
+            case 3:  // RUN-STOP
+                quit = 1;
+                return;
+
+            case CH_F1:
+                return;
+
+            case '+':
+                index_direction = 1;
+                update_index();
+                continue;
+
+            case '-':
+                index_direction = -1;
+                update_index();
+                continue;
+
+            default:
                 break;
         }
 
-        loop = 1;
-        index_direction = 1;
+        pause_on_shift();
+    }
+}
 
-        while (loop)
+void main() 
+{
+    dev = PEEK(0x00BA);   // Always use current drive#, as it's guaranteed to be enabled.
+
+    init_count();
+
+    while (1)
+    {
+        show_menu();
+        display_loop();
+
+        if (quit)
         {
-            if (mode == INDEX)
-            {
-                itoa(index, numbuf, 10);
-                strcpy(path, BASE_URL"index.koa?index=");
-                strcat(path, numbuf);
-            }
-
-            // TODO, blank screen, or eventually use double buffering for smooth transition 
-            koala_screen();     
-            result = LoadKoalaPictureAndDisplay(path);
-
-            if (result != 0)   // Show error message briefly
-            {
-                text_screen();  
-                bordercolor(2);
-            } 
-
-            result = sleep_or_key(timeout);
-
-            switch (result)
-            {
-                case 0:    // Timeout                    
-                case ' ':
-                    if (mode == INDEX)
-                    {
-                        update_index();
-                    }
-                    break;
-
-                case 3:  // RUN-STOP
-                    goto cleanup;                   
-
-                case CH_F1:
-                    loop = 0;
-                    break;
-
-                case '+':
-                    index_direction = 1;
-                    update_index();
-                    break;
-
-                case '-':
-                    index_direction = -1;
-                    update_index();
-                    break;
-
-                default:                 
-                    break;
-            }
-
-            pause_on_shift();
+            break;
         }
     }
-
-cleanup:
+   
     // Clean up
     text_screen();
     clrscr();
