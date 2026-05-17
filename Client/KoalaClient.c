@@ -382,17 +382,18 @@ void main()
     while (1)
     {
         show_menu();
-        display_loop();
+        if (quit) break;
 
-        if (quit)
-        {
-            break;
-        }
+        display_loop();
+        if (quit) break;
     }
    
     // Clean up
     text_screen();
     clrscr();
+    bordercolor(COLOR_LIGHTBLUE);
+    bgcolor(COLOR_BLUE);
+    textcolor(COLOR_LIGHTBLUE);
     cprintf("KoalaScope Exited\n\r");
     POKE(198, 0); /* clear keyboard queue */
 }
